@@ -1,0 +1,30 @@
+{
+  "name": "ml-demo-api",
+  "version": "1.0.0",
+  "description": "API para challenge mercadolibre (Hecho en NodeJs).",
+  "main": "server.js",
+  "scripts": {
+    "test": "node --inspect server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manzon972/ml-demo-be.git"
+  },
+  "keywords": [
+    "nodejs",
+    "angular",
+    "rest",
+    "web",
+    "services"
+  ],
+  "author": "Santiago M",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "got": "^11.8.2",
+    "moment": "^2.29.1"
+  }
+}
