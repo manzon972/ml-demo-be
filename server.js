@@ -36,7 +36,8 @@ app.route('/api/items').get(async (req, res) => {
                  thumbnail,
                  condition,
                  shipping,
-                 sold_quantity
+                 sold_quantity,
+                 address
              }) => ({
                 id,
                 title,
@@ -44,7 +45,8 @@ app.route('/api/items').get(async (req, res) => {
                 picture: thumbnail,
                 condition,
                 free_shipping: shipping.free_shipping,
-                sold_quantity
+                sold_quantity,
+                location: address.city_name
             }))
         const response = {...getBaseResponse(), items: results}
         res.send(response)
@@ -57,7 +59,7 @@ app.route('/api/items').get(async (req, res) => {
 });
 
 
-//GET One Task
+//GET One Item
 app.route('/api/items/:id').get(async (req, res) => {
     const itemId = String(req.params.id);
     const callUrl = `${mercadoLibreAPI.baseUrl}${mercadoLibreAPI.itemsEndpoint}/${itemId}`
